@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import threading
@@ -100,4 +101,17 @@ class SubtitleApp:
     def run_main_process(self, video_file, run_subsync, keep_intermediate, video_lang, sub_lang, output_path):
         try:
             main_process(video_file, run_subsync, keep_intermediate, video_lang, sub_lang, output_path)
-        except Exception as
+        except Exception as e:
+            messagebox.showerror("Error", str(e))
+        finally:
+            self.is_running = False
+            self.progress_bar.stop()
+            self.start_button.config(state=tk.NORMAL)
+            self.stop_button.config(state=tk.DISABLED)
+            self.progress_label.grid_remove()
+            self.progress_bar.grid_remove()
+
+def run_gui():
+    root = tk.Tk()
+    app = SubtitleApp(root)
+    root.mainloop()

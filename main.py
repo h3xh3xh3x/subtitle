@@ -1,3 +1,4 @@
+import os
 from extract_audio import extract_audio
 from transcribe import transcribe_audio_whisper, generate_srt_whisper, correct_zero_timecodes
 from synchronize import synchronize_subtitles

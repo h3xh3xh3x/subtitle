@@ -29,7 +29,7 @@ def generate_srt_whisper(segments, srt_file):
             
             # Write to SRT file
             f.write(f"{idx + 1}\n")
-            f.write(f"{str(timedelta(seconds=start_time))[:-3].replace('.', ',')} --> {str(timedelta(seconds=end_time))[:-3].replace('.', ',')}\n")
+            f.write(f"{str(timedelta(seconds=start_time))[:-3].replace('.', ',')} --> {str(timedelta(seconds=end_time))[:-3}.replace('.', ',')}\n")
             f.write(f"{text.strip()}\n\n")
             
             previous_end = end_time
