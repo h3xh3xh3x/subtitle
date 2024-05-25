@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SubtitleGenerator</class>
+ <widget class="QWidget" name="SubtitleGenerator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Subtitle Generator</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_videoFile">
+     <property name="text">
+      <string>Video File:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEdit_videoFile"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QPushButton" name="button_browseVideoFile">
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_videoLang">
+     <property name="text">
+      <string>Video Language:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="comboBox_videoLang">
+     <item>
+      <property name="text">
+       <string>eng</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>spa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>fre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ger</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>chi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>jpn</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_subLang">
+     <property name="text">
+      <string>Subtitle Language:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="comboBox_subLang">
+     <item>
+      <property name="text">
+       <string>eng</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>spa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>fre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ger</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>chi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>jpn</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_outputPath">
+     <property name="text">
+      <string>Output Path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="lineEdit_outputPath"/>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="button_browseOutputPath">
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="checkBox_runSubsync">
+     <property name="text">
+      <string>Run subsync</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="checkBox_keepIntermediate">
+     <property name="text">
+      <string>Keep intermediate files</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QPushButton" name="button_start">
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QPushButton" name="button_stop">
+     <property name="text">
+      <string>Stop</string>
+     </property>
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="3">
+    <widget class="QLabel" name="label_progress">
+     <property name="text">
+      <string>Processing, please wait...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="3">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

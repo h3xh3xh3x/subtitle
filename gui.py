@@ -7,13 +7,13 @@ from main import main_process
 class SubtitleApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Subtitle Processing")
+        self.root.title("Subtitle Generator")
         self.is_running = False
 
         self.file_label = tk.Label(root, text="Video File:")
         self.file_label.grid(row=0, column=0, padx=10, pady=10)
         self.file_entry = tk.Entry(root, width=50)
-        self.file_entry.grid(row=0, column=1, padx=10, pady=10)
+        self.file_entry.grid(row=0, column=1, columnspan=2, padx=10, pady=10)
         self.file_button = tk.Button(root, text="Browse", command=self.browse_file)
         self.file_button.grid(row=0, column=2, padx=10, pady=10)
 

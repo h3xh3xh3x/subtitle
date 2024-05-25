@@ -5,7 +5,7 @@ from synchronize import synchronize_subtitles
 
 def main_process(video_file, run_subsync, keep_intermediate, video_lang, sub_lang, output_path):
     audio_file = "extracted_audio.wav"
-    srt_file = os.path.join(output_path, os.path.splitext(os.path.basename(video_file))[0] + "_whisper.srt")
+    srt_file = os.path.join(output_path, os.path.splitext(os.path.basename(video_file))[0] + ".srt")
 
     # Extract audio from video
     if not extract_audio(video_file, audio_file):

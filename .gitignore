@@ -1,4 +1,5 @@
 __pycache__/
+.temp/
 *.mp3
 *.mp4
 *.wav
